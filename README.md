@@ -18,18 +18,18 @@ including `execution time`.
 #### Fuel my efforts with a cup of Coffee.
 <a href="https://www.buymeacoffee.com/mkojoa" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height:30px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
-## Features
-
-- capture who with the `IPrincipal` or `IClaimsPrincipal`
-- Audit log channel 
-    - [X] [File](#eazy-logging)
-    - [X] [Console](#eazy-logging)
-    - [X] [SqlServer Database](#eazy-logging)
 
 ## Get Started
 
 This library is implemented as a [Middleware](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-5.0) 
 class that can be configured to log requests that does not reach the action filter (i.e. unsolved routes, parsing errors, etc).
+
+#### Features
+
+- capture who with the `IPrincipal` or `IClaimsPrincipal`
+- Audit log channel 
+    - [X] [File](#eazy-logging)
+    - [X] [SqlServer Database](#eazy-logging)
 
 #### Installation (Not Yet)
     - Install-Package AuditBot
@@ -37,6 +37,23 @@ class that can be configured to log requests that does not reach the action filt
 > - Once you have configured the `AddAuditBot()` service in the Startup.cs file, 
 > - Once you have configured the `UseAuditBot()` configure in the Startup.cs file, 
 > you're ready to define the `AuditBotOptions` in the `app.settings.json`.
+
+#### Usage
+
+The audit can only be enabled as `Action Filter` : 
+Decorating the controllers/actions to be audited with 
+following action filter attribute. 
+
+1. [Auditor()]
+    - EventType : `Specify the type of event you want to audit`
+    - IncludeResponseBody : `Enable response body to be audited`
+    - IncludeRequestBody : `Enable request body to be audited`
+    - IncludeModelState : `Enable state of the request body to be audited`
+2. [IgnoreAuditor]
+
+
+
+
 
 ###### appsettings
 ```yaml
