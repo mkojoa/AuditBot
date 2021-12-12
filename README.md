@@ -28,6 +28,9 @@ including `execution time`.
 
 ## Get Started
 
+This library is implemented as a [Middleware](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-5.0) 
+class that can be configured to log requests that does not reach the action filter (i.e. unsolved routes, parsing errors, etc).
+
 #### Installation (Not Yet)
     - Install-Package AuditBot
 
