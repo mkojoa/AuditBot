@@ -1,5 +1,4 @@
-﻿using AuditBot.Helpers;
-using AuditBot.Models;
+﻿using AuditBot.Models;
 using AuditBot.Services;
 using System;
 using System.Collections.Generic;
@@ -8,7 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AuditBot.Core
+namespace AuditBot.Factories
 {
     public class AuditBotScopeFactory : IAuditBotScopeFactory
     {

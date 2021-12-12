@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AuditBot.AuditOptions
+namespace AuditBot.EfCore
 {
-    internal class AuditBotOption
+    public class AuditEvent
     {
     }
 }
