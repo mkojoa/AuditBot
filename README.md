@@ -49,13 +49,15 @@ following action filter attribute.
     - IncludeResponseBody : `Enable response body to be audited`
     - IncludeRequestBody : `Enable request body to be audited`
     - IncludeModelState : `Enable state of the request body to be audited`
+    - MailIfError : `Enable send email when something happends`
 2. [IgnoreAuditor]
 
 
 
 
 
-###### appsettings
+###### appsettings.json
+Copy the below code to your project appsettings.
 ```yaml
 "AuditBotOption": {
     "ApplicationName": "auditbot-demo-api",
