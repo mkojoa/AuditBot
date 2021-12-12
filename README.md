@@ -35,12 +35,12 @@ class that can be configured to log requests that does not reach the action filt
     - Install-Package AuditBot
 
 > - Once you have configured the `AddAuditBot()` service in the Startup.cs file, 
-> - Once you have configured the `UseAuditBot()` in the SetUp.cs file, 
+> - Once you have configured the `UseAuditBot()` configure in the Startup.cs file, 
 > you're ready to define the `AuditBotOptions` in the `app.settings.json`.
 
 ###### appsettings
 ```yaml
-"AuditBot": {
+"AuditBotOption": {
     "ApplicationName": "auditbot-demo-api",
     "Source": "AuditBot.Demo.Api",
     "SubjectId": "sub",
